@@ -1,29 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld v-bind:title="message" v-on:result-event="appAction" />
-    <hr />
-    <p>{{ result }}</p>
+    <HelloJSX />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloJSX from "./components/HelloJSX.jsx";
 
 export default {
-  name: "App",
+  name: "app",
   components: {
-    HelloWorld,
-  },
-  data() {
-    return {
-      message: "HELLO",
-      result: "no event.",
-    };
-  },
-  methods: {
-    appAction(message) {
-      this.result = '(*** you send: "' + message + '". ***)';
-    },
+    HelloJSX,
   },
 };
 </script>
